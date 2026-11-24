@@ -1171,7 +1171,7 @@ function init(){if(document.getElementById('fsQuickNewSearch'))return;
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();</script><script id="fs-quality-audit-2411">(()=>{'use strict';
 const panel=document.createElement('section');panel.className='card';panel.id='fsQualityPanel';
-panel.innerHTML='<h2>Auditoria de qualidade dos filtros — revisão 2</h2><p class="muted small">Identifica códigos repetidos, dados incompletos e vínculos de equivalência inconsistentes. Apenas consulta: não altera o banco.</p><button type="button" id="fsQualityRun" class="outline">Verificar filtros e equivalências</button> <button type="button" id="fsQualityCsv" class="outline" disabled>Baixar relatório CSV</button><p id="fsQualityStatus" class="small muted" aria-live="polite"></p><div id="fsQualityResults" class="import-preview"></div>';
+panel.innerHTML='<h2>Auditoria de qualidade dos filtros — revisão 3</h2><p class="muted small">Identifica códigos repetidos, dados incompletos e vínculos de equivalência inconsistentes. Apenas consulta: não altera o banco.</p><button type="button" id="fsQualityRun" class="outline">Verificar filtros e equivalências</button> <button type="button" id="fsQualityCsv" class="outline" disabled>Baixar relatório CSV</button><p id="fsQualityStatus" class="small muted" aria-live="polite"></p><div id="fsQualityResults" class="import-preview"></div>';
 const app=document.getElementById('app'),first=document.getElementById('liveAuditPanel');if(!app||!first)return;first.after(panel);
 const get=id=>document.getElementById(id);let report=[];
 async function all(table,cols){const out=[];for(let offset=0;offset<100000;offset+=500){const page=await request('/rest/v1/'+table+'?select='+cols+'&order=id&limit=500&offset='+offset);if(!Array.isArray(page))throw Error('Resposta inválida: '+table);out.push(...page);if(page.length<500)return out;}throw Error('Limite de leitura atingido: '+table)}
@@ -1191,10 +1191,15 @@ for(const [a,b] of knownPairs){const x=byId.get(String(a)),y=byId.get(String(b))
 const pairs=new Map();for(const l of links){const a=String(l.filtro_origem_id),b=String(l.filtro_equivalente_id),pair=a+'|'+b;if(!byId.has(a)||!byId.has(b))add('VÍNCULO SEM FILTRO',String(l.id),'Origem '+a+' → equivalente '+b);if(a===b)add('AUTOEQUIVALÊNCIA',String(l.id),'Filtro '+a+' vinculado a si mesmo');if(pairs.has(pair))add('VÍNCULO DUPLICADO',String(l.id),'Mesmo par de filtros do vínculo '+pairs.get(pair));else pairs.set(pair,l.id);if(!String(l.fonte??'').trim())add('FONTE AUSENTE',String(l.id),'Equivalência '+a+' → '+b+' sem fonte');}
 const counts={};for(const [type] of report)counts[type]=(counts[type]||0)+1;
 show('Resumo',filters.length+' filtros • '+links.length+' equivalências • '+report.length+' ocorrências. Nenhum dado foi alterado.');show('Conferência histórica',foundPairs+' de 6 pares anteriormente sinalizados encontrados na leitura atual.');
+const distinctIds=new Set(filters.map(f=>String(f.id)));
+show('Integridade da leitura',filters.length+' registros retornados • '+distinctIds.size+' IDs únicos • faixa de IDs '+(filters.length?filters[0].id+' a '+filters[filters.length-1].id:'vazia'));
+if(distinctIds.size!==filters.length)add('LEITURA REPETIDA','fs_filtros','A paginação retornou IDs repetidos; a auditoria não pode ser considerada completa.');
+for(const [a,b] of knownPairs){const x=byId.get(String(a)),y=byId.get(String(b));if(!x||!y){const missing=[!x?a:null,!y?b:null].filter(v=>v!==null);add('PAR HISTÓRICO NÃO LOCALIZADO',a+', '+b,'ID(s) não encontrados na leitura: '+missing.join(', ')+'. Verificar se foram removidos, se a sessão não tem acesso ou se a paginação está incompleta.');}}
+
 for(const [type,count] of Object.entries(counts))show(type,count+' ocorrência(s)');
 for(const [type,ids,detail] of report.slice(0,30))show(type+' — ID '+ids,detail);
 if(report.length>30)show('Relatório completo','Mostrando 30 ocorrências. Baixe o CSV para consultar todas.');
-get('fsQualityStatus').textContent='Auditoria concluída (somente leitura).';get('fsQualityCsv').disabled=false;
+get('fsQualityStatus').textContent='Auditoria concluída (somente leitura). Ausência de ocorrências não comprova catálogo validado.';get('fsQualityCsv').disabled=false;
 }catch(e){get('fsQualityStatus').textContent='Não foi possível concluir: '+e.message+'; confira as permissões de leitura.';}finally{btn.disabled=false;}};
 get('fsQualityCsv').onclick=()=>{const rows=[['Diagnóstico','IDs','Detalhes'],...report];const csv='\ufeff'+rows.map(row=>row.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(';')).join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='FilterScan_Auditoria_Filtros_Equivalencias.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);};
 })();</script></body></html>
