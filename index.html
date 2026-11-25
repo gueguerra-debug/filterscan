@@ -4,7 +4,7 @@
 .filter-group{margin:24px 0 10px;padding:12px 14px;border-left:4px solid var(--gold);background:#252016;border-radius:8px;color:#f0d38b;font-size:17px}
 
 .import-preview{max-height:280px;overflow:auto;margin-top:12px}.import-preview table{border-collapse:collapse;width:100%;font-size:12px}.import-preview th,.import-preview td{border:1px solid #484239;padding:8px;text-align:left}.import-preview th{color:var(--gold)}textarea{width:100%;min-height:150px;background:#0b0e14;color:#fff;border:1px solid #45423b;border-radius:10px;padding:12px;font:13px ui-monospace,monospace}.import-hint{color:#a5a9b1;font-size:12px}
-</style><style id="fs-commercial-ui">#fsToolsToggle{margin:12px 0 0}#fsToolsGroup{margin-top:16px}#fsToolsGroup>summary{cursor:pointer;color:#d9b75f;padding:17px;border:1px solid #5c4a28;border-radius:12px;background:#191817;font-weight:700;list-style-position:inside}#fsToolsGroup[open]>summary{margin-bottom:12px}#fsToolsGroup>.card{margin:12px 0}#fsConsultHint{font-size:13px;color:#c5bdab;margin:10px 0 0}#fsToolsGroup:not([open]) .card{display:none}#fsToolsGroup .card{max-width:100%}</style><style id="fs-status-style">#fsReadiness{padding:10px 12px;margin:10px 0;border:1px solid #6a5428;border-radius:8px;color:#f1d58b;background:#201b12;font-size:13px}</style><link rel="manifest" href="./manifest.webmanifest"><meta name="theme-color" content="#080a0e"><link rel="apple-touch-icon" href="./icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><style id="fs-plans-style">#fsPlans{margin:16px 0;border:1px solid #6b542c;background:#17191e;border-radius:14px;padding:18px}#fsPlans h2{color:#e4c477;margin:0 0 8px}#fsPlans .fs-plan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:12px}#fsPlans .fs-plan{border:1px solid #49443a;background:#202127;border-radius:12px;padding:14px}#fsPlans .fs-plan strong{color:#f2d68c}#fsPlans .fs-plan p{font-size:13px;line-height:1.45;color:#d1d1d1}#fsPlans .fs-plan small{color:#d5bd81}#fsPlans .fs-plan-note{font-size:12px;color:#c8c0b2;margin-top:12px}</style><style id="fs-subscription-style">#fsSubscription{margin:14px 0;padding:16px;border:1px solid #6b542c;border-radius:14px;background:#17191e}#fsSubscription strong{color:#e4c477}#fsSubscription button{margin-top:8px}#fsSubscriptionStatus{line-height:1.55}</style></head><body><div class="wrap"><header class="brand"><div class="logo">FILTER<span>SCAN</span></div><div class="sub">Inteligência em filtros e manutenção preventiva</div><div class="sub" style="font-size:11px">Versão 24.11.2026 · revisão 4.8 · foto na tela principal · catálogo em validação</div></header>
+</style><style id="fs-commercial-ui">#fsToolsToggle{margin:12px 0 0}#fsToolsGroup{margin-top:16px}#fsToolsGroup>summary{cursor:pointer;color:#d9b75f;padding:17px;border:1px solid #5c4a28;border-radius:12px;background:#191817;font-weight:700;list-style-position:inside}#fsToolsGroup[open]>summary{margin-bottom:12px}#fsToolsGroup>.card{margin:12px 0}#fsConsultHint{font-size:13px;color:#c5bdab;margin:10px 0 0}#fsToolsGroup:not([open]) .card{display:none}#fsToolsGroup .card{max-width:100%}</style><style id="fs-status-style">#fsReadiness{padding:10px 12px;margin:10px 0;border:1px solid #6a5428;border-radius:8px;color:#f1d58b;background:#201b12;font-size:13px}</style><link rel="manifest" href="./manifest.webmanifest"><meta name="theme-color" content="#080a0e"><link rel="apple-touch-icon" href="./icon-192.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><style id="fs-plans-style">#fsPlans{margin:16px 0;border:1px solid #6b542c;background:#17191e;border-radius:14px;padding:18px}#fsPlans h2{color:#e4c477;margin:0 0 8px}#fsPlans .fs-plan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:12px}#fsPlans .fs-plan{border:1px solid #49443a;background:#202127;border-radius:12px;padding:14px}#fsPlans .fs-plan strong{color:#f2d68c}#fsPlans .fs-plan p{font-size:13px;line-height:1.45;color:#d1d1d1}#fsPlans .fs-plan small{color:#d5bd81}#fsPlans .fs-plan-note{font-size:12px;color:#c8c0b2;margin-top:12px}</style><style id="fs-subscription-style">#fsSubscription{margin:14px 0;padding:16px;border:1px solid #6b542c;border-radius:14px;background:#17191e}#fsSubscription strong{color:#e4c477}#fsSubscription button{margin-top:8px}#fsSubscriptionStatus{line-height:1.55}</style></head><body><div class="wrap"><header class="brand"><div class="logo">FILTER<span>SCAN</span></div><div class="sub">Inteligência em filtros e manutenção preventiva</div><div class="sub" style="font-size:11px">Versão 24.11.2026 · revisão 4.9 · preventivas somente filtros · catálogo em validação</div></header>
 <section class="card" id="setup"><h2>Conexão com o Supabase</h2><p class="muted small">Informe a URL principal do projeto FilterScan. A chave abaixo é pública. Nunca use a chave secreta.</p><label for="url">Project URL (https://...supabase.co)</label><input id="url" placeholder="https://seu-projeto.supabase.co" autocomplete="url"><label for="key">Publishable key</label><input id="key" value="sb_publishable_uRqijecMWwi9CHkhiYKOvQ_fgBhTNtX" spellcheck="false"><div style="height:15px"></div><button id="save">Salvar conexão</button><p id="setupMsg" class="error small"></p></section>
 <section class="card hidden" id="login"><h2>Entrar no FilterScan</h2><label for="email">E-mail</label><input id="email" type="email" autocomplete="email"><label for="password">Senha</label><input id="password" type="password" autocomplete="current-password"><div style="height:18px"></div><button id="signIn">Entrar</button><button class="outline" id="editConnection" style="margin-left:8px">Configuração</button><p id="loginMsg" class="error small"></p></section>
 <section class="hidden" id="app"><section class="card" id="liveAuditPanel"><h2>Verificação real do Supabase</h2><p class="muted small">Testa a API com a sessão atual e mostra os registros que o aplicativo consegue ler. Não altera nenhum dado.</p><button type="button" id="liveAuditRun" class="outline">Testar conexão e catálogo agora</button><p id="liveAuditStatus" class="small muted" aria-live="polite"></p><div id="liveAuditResults" class="import-preview"></div></section><section id="fsSubscription" aria-live="polite"><strong>Minha assinatura FilterScan</strong><p id="fsSubscriptionStatus" class="small muted">Consultando seu plano no Supabase...</p><button id="fsSubscriptionRefresh" class="outline" type="button">Atualizar situação do plano</button><p class="small muted">O acesso à interface segue o plano ativo. A proteção de dados na API e os pagamentos ainda precisam ser configurados.</p></section><div class="card"><div class="topline"><div><h2 style="margin:0">Consulta técnica</h2><p id="account" class="muted small" style="margin-bottom:0"></p></div><button class="outline" id="logout">Sair</button></div><div class="notice small">Catálogo técnico em atualização. Somente aplicações verificadas devem ser usadas para compra ou manutenção. Os anos cadastrados não garantem compatibilidade.</div><label for="category">1. Categoria</label><select id="category"><option value="">Selecione a categoria</option></select><label for="maker">2. Fabricante</label><select id="maker" disabled><option value="">Selecione a categoria primeiro</option></select><div id="equipmentTypeWrap" class="hidden"><label for="equipmentType">3. Tipo de equipamento</label><select id="equipmentType" disabled><option value="">Selecione o fabricante primeiro</option></select><p class="muted small">Todos os tipos podem ser selecionados. Somente modelos cadastrados para o fabricante e tipo escolhido são exibidos.</p></div><label for="model" id="modelLabel">3. Modelo</label><select id="model" disabled><option value="">Selecione o fabricante primeiro</option></select><div id="fsVariantGuidance" class="notice small hidden" role="status" aria-live="polite"></div><label for="year" id="yearLabel">4. Ano</label><select id="year" disabled><option value="">Selecione o modelo primeiro</option></select><p id="yearHelp" class="muted small hidden"></p><div id="variantCoverage" class="hidden result" aria-live="polite"></div><div style="height:20px"></div><div id="fsEngineVerification" class="notice small hidden" aria-live="polite"></div><button id="consult" disabled style="width:100%">Consultar</button><p id="catalogMsg" class="error small"></p><div id="diagnosticPanel" class="hidden" style="margin-top:14px"><button id="diagnose" class="outline" type="button" style="width:100%">Diagnosticar cadastro deste modelo/ano</button><div id="diagnosticResults" aria-live="polite"></div></div></div>
@@ -333,20 +333,23 @@ async function renderTab(tab){
     return;
   }
   if(tab==='maintenance'){
-    notice('Como ler o plano: cada revisão mostra as trocas e inspeções cadastradas para o modelo selecionado, com código da peça, quantidade e status quando disponíveis. Serviços não cadastrados não são presumidos.');
     const machineCategory=/máquin|maquin|equipamento|agrícola|agricola/i.test($('category').selectedOptions[0]?.textContent||'');
+    const filterService=r=>{
+      const s=String(r.servico||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+      // Exibir apenas substituição/troca de filtros, nunca inspeções ou limpeza.
+      return /\b(filtro|filtros|elemento filtrante|elementos filtrantes)\b/.test(s)
+        && /\b(troca|trocar|substituicao|substituir|renovacao|renovar)\b/.test(s)
+        && !/\b(inspec|verific|limpez|lavag|drenag|avaliac)\b/.test(s);
+    };
+    const title=document.createElement('h3');title.textContent='Troca de filtros por preventiva';title.style.margin='18px 0 10px';$('resultBody').append(title);
+    notice('Somente filtros previstos para troca no cadastro técnico. Códigos não informados aparecem como pendentes. Confirme a aplicação pelo manual e número de série do equipamento.');
     if(machineCategory){
-      const heading=document.createElement('h3');heading.textContent='Ciclos operacionais de máquinas pesadas';heading.style.margin='18px 0 10px';$('resultBody').append(heading);
-      notice('Inspeção diária de 10 h: separada das preventivas. Ciclos internos: 250 h (base), 500 h (inclui 250 h e adicionais), 750 h (250 h), 1.000 h (250 + 500 h e adicionais próprios, quando cadastrados). Repetição a cada 250 h; os serviços devem ser validados no manual do equipamento.');
-      exportedRows.push(['Modelo ID','Revisão (h)','Ciclo de origem (h)','Serviço','Status','Observação']);
       const revisions=Array.from({length:8},(_,i)=>(i+1)*250);
+      exportedRows.push(['Modelo ID','Revisão (h)','Ciclo de origem (h)','Filtro a trocar','Código da peça','Quantidade','Situação']);
       try{
         const rows=await request('/rest/v1/fs_servicos_ciclos?select=ciclo_horas,servico,sistema,codigo_peca,quantidade,unidade,fonte_tecnica,observacao,status_validacao&modelo_id=eq.'+encodeURIComponent(selection.modelId)+'&order=ciclo_horas,servico');
         if(sequence!==resultSequence)return;
-        // Registros 'Definir serviços...' são marcadores administrativos, não serviços executáveis.
-        const isPlaceholder=r=>/^definir servi[cç]os/i.test(String(r.servico||'').trim());
-        const validRows=rows.filter(r=>!isPlaceholder(r));
-        const pendingCycles=new Set(rows.filter(isPlaceholder).map(r=>Number(r.ciclo_horas)));
+        const filters=rows.filter(filterService);
         for(const revision of revisions){
           const included=[250];
           if(revision%500===0)included.push(500);
@@ -354,55 +357,40 @@ async function renderTab(tab){
           if(revision%2000===0)included.push(2000);
           const unique=new Map();
           for(const cycle of included){
-            for(const r of validRows.filter(x=>Number(x.ciclo_horas)===cycle)){
-              const key=String(r.servico||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim().replace(/\s+/g,' ').toLocaleLowerCase('pt-BR');
+            for(const r of filters.filter(x=>Number(x.ciclo_horas)===cycle)){
+              const key=String(r.servico||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim().replace(/\s+/g,' ').toLowerCase();
               if(!unique.has(key))unique.set(key,{...r,originCycle:cycle});
             }
           }
-          const services=[...unique.values()];
+          const items=[...unique.values()];
           line('PREVENTIVA DE '+revision.toLocaleString('pt-BR')+' HORAS',
-            'Serviços dos ciclos '+included.map(c=>c.toLocaleString('pt-BR')+' h').join(' + ')+' • '+services.length+' serviço(s) cadastrado(s), sem duplicação • Consulte o manual do modelo e número de série.');
-          if(!services.length)line('SERVIÇOS NÃO CADASTRADOS','Ainda não há uma lista técnica de trocas para esta revisão. Não utilizar como plano de execução.');
-          exportedRows.push([selection.modelId,revision,included.join(' + '),'Revisão acumulativa','REGRA INTERNA','Não equivale a plano homologado']);
-          for(const cycle of included){
-            const cycleServices=services.filter(r=>r.originCycle===cycle);
-            if(cycle!==250&&!cycleServices.length){
-              line('ADICIONAIS DE '+cycle.toLocaleString('pt-BR')+' h • PENDENTES',
-                (pendingCycles.has(cycle)?'Ciclo cadastrado no Supabase; ': '')+'Serviços exclusivos ainda não definidos. Consultar manual da versão e número de série. Este marcador não é serviço de manutenção.');
-              exportedRows.push([selection.modelId,revision,cycle,'Serviços adicionais a definir','PENDENTE','Sem procedimentos confirmados']);
-            }
-            for(const r of cycleServices){
-              const details=['Origem: '+cycle+' h','Sistema: '+(r.sistema||'Não informado'),'Status: '+(r.status_validacao||'PENDENTE')];
-              if(r.codigo_peca)details.push('Peça: '+r.codigo_peca);
-              if(r.quantidade!=null)details.push('Quantidade: '+r.quantidade+(r.unidade?' '+r.unidade:''));
-              if(r.fonte_tecnica)details.push('Fonte: '+r.fonte_tecnica);
-              details.push(r.observacao||'Procedimento e intervalo não confirmados pelo fabricante.');
-              line((String(r.status_validacao||'').toUpperCase()==='VALIDADO'?'SERVIÇO CADASTRADO • ':'PENDENTE DE VALIDAÇÃO • ')+r.servico,details.join(' • '));
-              exportedRows.push([selection.modelId,revision,cycle,r.servico,r.status_validacao||'PENDENTE',details.join(' • ')]);
-            }
+            items.length+' tipo(s) de filtro para troca • Ciclos: '+included.map(x=>x+' h').join(' + '));
+          if(!items.length){
+            line('FILTROS A DEFINIR','Nenhuma troca de filtro cadastrada para esta revisão. Pendente de validação técnica.');
+            exportedRows.push([selection.modelId,revision,included.join(' + '),'Não cadastrado','','','PENDENTE']);
+          }
+          for(const r of items){
+            const code=String(r.codigo_peca||'').trim();
+            const valid=String(r.status_validacao||'').trim().toUpperCase()==='VALIDADO';
+            const qty=r.quantidade==null?'Não informada':String(r.quantidade)+(r.unidade?' '+r.unidade:'');
+            const desc='Código: '+(code||'PENDENTE DE VALIDAÇÃO')+' • Quantidade: '+qty+' • Ciclo: '+r.originCycle+' h • '+(valid?'Cadastro validado':'Pendente de validação');
+            line(r.servico,desc);
+            exportedRows.push([selection.modelId,revision,r.originCycle,r.servico,code||'PENDENTE',qty,valid?'VALIDADO':'PENDENTE']);
           }
         }
-      }catch(e){
+      }catch(e){if(sequence===resultSequence)line('Consulta indisponível','Não foi possível carregar os filtros das preventivas: '+e.message);}
+    }else{
+      try{
+        const plans=await request('/rest/v1/fs_consulta_manutencao?select=servico,intervalo_km,intervalo_meses,status_validacao,intervalo_horas&modelo_ano_id=eq.'+encodeURIComponent(selection.modelYearId)+'&order=servico');
         if(sequence!==resultSequence)return;
-        line('Revisões acumulativas indisponíveis','Não foi possível carregar serviços do Supabase: '+e.message);
-        notice('Verifique SELECT/RLS de fs_servicos_ciclos para usuários autenticados.');
-      }
+        const filters=plans.filter(filterService);
+        if(!filters.length)line('FILTROS A DEFINIR','Não há trocas de filtros cadastradas para este modelo e ano.');
+        for(const p of filters){
+          const intervals=[p.intervalo_horas!=null?p.intervalo_horas+' h':'',p.intervalo_km!=null?p.intervalo_km+' km':'',p.intervalo_meses!=null?p.intervalo_meses+' meses':''].filter(Boolean);
+          line(p.servico,'Intervalo: '+(intervals.join(' ou ')||'Pendente')+' • Código: PENDENTE DE VALIDAÇÃO • '+(p.status_validacao||'PENDENTE'));
+        }
+      }catch(e){if(sequence===resultSequence)line('Consulta indisponível',e.message);}
     }
-    notice('Planos técnicos do fabricante: somente intervalos validados são exibidos como confirmados. Inspeções diárias não são ciclos de preventiva.');
-    try{
-      const plans=await request('/rest/v1/fs_consulta_manutencao?select=servico,intervalo_km,intervalo_meses,status_validacao,intervalo_horas&modelo_ano_id=eq.'+encodeURIComponent(selection.modelYearId)+'&order=servico');
-      if(sequence!==resultSequence)return;
-      if(!plans.length){line('Nenhum plano cadastrado','Não há serviços preventivos para este modelo e ano.')}
-      exportedRows.push(['Serviço','Intervalo (horas)','Intervalo (km)','Intervalo (meses)','Status']);plans.forEach(p=>{
-        const valid=String(p.status_validacao||'').trim().toUpperCase()==='VALIDADO';
-        const intervals=[];
-        if(valid&&p.intervalo_horas!=null)intervals.push(Number(p.intervalo_horas).toLocaleString('pt-BR')+' h');
-        if(valid&&p.intervalo_km!=null)intervals.push(Number(p.intervalo_km).toLocaleString('pt-BR')+' km');
-        if(valid&&p.intervalo_meses!=null)intervals.push(p.intervalo_meses+' meses');
-        line(p.servico||'Serviço',valid&&intervals.length?intervals.join(' ou ')+' (o que ocorrer primeiro) • VALIDADO NO CADASTRO':'Intervalo pendente de validação');exportedRows.push([p.servico,valid?p.intervalo_horas:'',valid?p.intervalo_km:'',valid?p.intervalo_meses:'',p.status_validacao]);
-      });
-    }catch(e){if(sequence===resultSequence)line('Erro ao consultar preventivas',e.message+' — Confira as permissões de leitura da view no Supabase.')}
-    if(sequence===resultSequence)await showPreventiveEvidence(sequence);
     return;
   }
  notice('Compatibilidade confirmada somente quando o filtro E a aplicação específica estiverem com status VALIDADO. Referências pendentes são exibidas apenas para pesquisa.');
